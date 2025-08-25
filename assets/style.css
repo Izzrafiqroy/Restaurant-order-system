@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+.restaurant-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f8f6f0;
+}
+
+.tagline {
+    font-size: 1.4em;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-style: italic;
+    color: #f0f0f0;
+    font-weight: 400;
+}
+
+.since-badge {
+    background: rgba(139, 69, 19, 0.9);
+    color: #f8f6f0;
+    padding: 8px 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    margin: 20px auto 40px;
+    display: inline-block;
+    border: 2px solid rgba(212, 175, 55, 0.8);
+}
+
+.ordering-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.order-option {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 40px 30px;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.order-option:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(212, 175, 55, 0.8);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.order-option i {
+    font-size: 3.5em;
+    margin-bottom: 25px;
+    display: block;
+    color: #d4af37;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.order-option h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.order-option p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.order-button {
+    background: #d4af37;
+    color: #2c2826;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Crimson Text', serif;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.order-button:hover {
+    background: #f4e47c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.walk-in-option {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(160, 82, 45, 0.1));
+}
+
+.online-option {
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(192, 57, 43, 0.1));
+}
+
+.walk-in-option:hover {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.2), rgba(160, 82, 45, 0.2));
+}
+
+.online-option:hover {
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.2), rgba(192, 57, 43, 0.2));
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature i {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #d4af37;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.feature h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.feature p {
+    font-size: 1em;
+    opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.admin-link {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .restaurant-name {
+        font-size: 2.8em;
+    }
+    
+    .tagline {
+        font-size: 1.2em;
+    }
+    
+    .ordering-buttons {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 40px;
+    }
+    
+    .order-option {
+        padding: 35px 25px;
+    }
+    
+    .order-option h2 {
+        font-size: 1.8em;
+    }
+    
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 60px;
+    }
+    
+    .admin-link {
+        bottom: 20px;
+        right: 20px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 30px 15px;
+    }
+    
+    .restaurant-name {
+        font-size: 2.2em;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
